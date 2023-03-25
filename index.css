@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgb(49, 49, 65);
+}
 input[type="search"]{
     width: 'fit-content';
     padding-left: 10px;
@@ -15,7 +17,7 @@ button{
 #cont,#cont1{
     border:2px solid black;
     border-radius: 10px;
-    background-image:url("https://wallpaperaccess.com/full/6122106.jpg");
+    background-color: rgb(101, 108, 137);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -35,8 +37,7 @@ button{
 .days{
     border-top: 2px solid black;
     padding: 50px;
-    background-image:url("https://wallpaperaccess.com/full/6122106.jpg ");    
-    color: white;
+        
     display: flex;
     justify-content: space-between;
 }
@@ -73,4 +74,21 @@ h4,h5{
 }
 h3{
     font-size: 20px;
+}
+
+.container-fluid{
+    width:90%;
+}
+
+#cont,#cont1,.days{
+    background-color: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    color:#fcfcfc;
+    font-family:'Poppins',sans-serif;
+}
+.days1{
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    
 }

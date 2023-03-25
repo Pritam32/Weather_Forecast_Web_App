@@ -10,6 +10,7 @@ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 const d = new Date();
 let day = weekday[d.getDay()];
 let time = new Date().toLocaleString('en-US', { hour: 'numeric',minute:'numeric', hour12: true });
+let tv=new Date().getHours()>12?"PM":"AM";
 
 fetch("https://api.openweathermap.org/data/2.5/weather?q=bhubaneswar&appid=53a4da560cc2fa6fe4c1b41b0ef4c793")
     .then((response)=>response.json())
@@ -44,7 +45,9 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=bhubaneswar&appid=53a4
         document.getElementById('q'+(i+1)).src="http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
        }
         
-        console.log(data.list.length);
+        for(let i=0;i<4;i++){
+            document.getElementById('w'+(i+1)).innerHTML=Number(new Date().getHours()-12)+(i+1)+":"+Number(new Date().getMinutes())+" "+tv;
+        }
 })
 
 button.onclick=()=>{
