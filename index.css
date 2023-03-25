@@ -1,0 +1,76 @@
+
+input[type="search"]{
+    width: 'fit-content';
+    padding-left: 10px;
+    font-weight:500;
+    font-size:20px;
+    border: 1px solid black;
+
+}
+button{
+    margin-left: 10px;
+}
+
+
+#cont,#cont1{
+    border:2px solid black;
+    border-radius: 10px;
+    background-image:url("https://wallpaperaccess.com/full/6122106.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: 300px; 
+
+    
+}
+#cont1{
+    
+    justify-content: space-between;
+    height:fit-content;
+    
+    
+}
+.days{
+    border-top: 2px solid black;
+    padding: 50px;
+    background-image:url("https://wallpaperaccess.com/full/6122106.jpg ");    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+h4,h5{
+    font-size: 17px;
+    margin-top: 7px;
+}
+.weather,.moment{
+    margin-top: 20px;
+    font-size: 22px;
+    
+}
+.container::-webkit-scrollbar{
+    width:0px;
+}
+.col-lg-3{
+    background-color: brown;
+}
+#cont2{
+    max-width: 100%;
+    
+}
+.days1{
+    border: 2px solid white;
+    padding: 50px;
+    border-radius: 10px;
+    height:fit-content;
+    padding-bottom: 70px;
+        
+}
+#a1,#a2,#a3,#a4{
+    padding: 0px;
+    margin: 0px;
+}
+h3{
+    font-size: 20px;
+}
