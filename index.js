@@ -6,7 +6,7 @@ var moment=document.querySelector('.moment');
 
 var ic=document.querySelector('#main');
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-
+let hr=new Date().getHours();
 const d = new Date();
 let day = weekday[d.getDay()];
 let time = new Date().toLocaleString('en-US', { hour: 'numeric',minute:'numeric', hour12: true });
@@ -46,7 +46,9 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=bhubaneswar&appid=53a4
        }
         
         for(let i=0;i<4;i++){
-            document.getElementById('w'+(i+1)).innerHTML=Number(new Date().getHours()-12)+(i+1)+":"+Number(new Date().getMinutes())+" "+tv;
+            hr=new Date().getHours()+(i+1);
+            document.getElementById('w'+(i+1)).innerHTML=((hr<=12)?Number(new Date().getHours()+(i+1)):Number(new Date().getHours()-12+(i+1)))+":"+new Date().getMinutes()+" "+tv;
+            
         }
 })
 
